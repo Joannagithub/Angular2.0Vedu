@@ -1,0 +1,66 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        {{pageTitle}}
+    </div>
+
+    <!-- Filter the teachers   -->
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-2'>Filter by:</div>
+            <div class='col-md-4'>
+                <input type='text' [(ngModel)]='listFilter' />
+            </div>
+        </div>
+        <div class='row' *ngIf='listFilter'>
+            <div class='col-md-6'>
+                <h3>Filtered by: {{listFilter}} </h3>
+            </div>
+        </div>
+
+        <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+
+        <div class='table-responsive'>
+            <table class='table'
+                   *ngIf='teachers && teachers.length'>
+                <thead>
+                    <tr>
+                        <th>
+                            <button class='btn btn-primary'
+                                (click)='toggleImage()'>
+                                {{showImage ? 'Hide' : 'Show'}} Image
+                            </button>
+                        </th>
+                        <th>Teacher</th>
+                        <th>Code</th>
+                        <th>Available</th>
+                        <th>Price</th>
+                        <th>5 Star Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let teacher of teachers | teacherFilter:listFilter'>
+                        <td>
+                            <img *ngIf='showImage'
+                                 [src]='teacher.imageUrl'
+                                 [title]='teacher.teacherName | uppercase'
+                                 [style.width.px]='imageWidth' 
+                                 [style.margin.px]='imageMargin'>
+                        </td>
+                        <td><a [routerLink]="['/teacher', teacher.teacherId]">
+                            {{teacher.teacherName}}
+                            </a>
+                        </td>
+                        <td>{{ teacher.teacherCode | lowercase }}</td>
+                        <td>{{ teacher.registrationDate }}</td>
+                        <td>{{ teacher.age }}</td>
+                        <td>
+                            <ai-star [rating]='teacher.starRating'
+                                    (ratingClicked)='onRatingClicked($event)'>
+                            </ai-star>
+                       </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

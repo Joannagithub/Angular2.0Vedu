@@ -1,0 +1,52 @@
+[
+    {
+        "studentId": 1,
+        "studentName": "Tony Cijier",
+        "studentCode": "vedu-007",
+        "registrationDate": "Nov. 19, 2016",
+        "description": "CS student interesting in new technologies.",
+        "age": 20,
+        "starRating": 4.5,
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/267603/reniferm-dodatkowe.png"
+    },
+    {
+        "studentId": 2,
+        "studentName": "Joe Smith",
+        "studentCode": "vedu-008",
+        "registrationDate": "Nov. 18, 2016",
+        "description": "Civil enginer interesting in learning Angular 2.0",
+        "age": 30,
+        "starRating": 4.2,
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/10310/Odysseus-boy.png"
+    },
+    {
+        "studentId": 5,
+        "studentName": "Emma Wang",
+        "studentCode": "vedu-0048",
+        "registrationDate": "May 21, 2016",
+        "description": "Student interesting in leaning English",
+        "age": 10,
+        "starRating": 4.8,
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/247548/AcherGirl_v02.png"
+    },
+    {
+        "studentId": 8,
+        "studentName": "Santa Claus",
+        "studentCode": "vedu-0022",
+        "registrationDate": "Dec 2, 2016",
+        "description": "Is a legendary figure of Western culture who is said to bring gifts to the homes of well-behaved (\"good\" or \"nice\") children on Christmas Eve (24 December) and the early morning hours of Christmas Day (25 December).",
+        "age": 100,
+        "starRating": 5,
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/173705/cyb-santa-claus.png"
+    },
+    {
+        "studentId": 10,
+        "studentName": "Donald Trump",
+        "studentCode": "GMG-0042",
+        "registrationDate": "Nov 8, 2017",
+        "description": "The President-elect of the United States",
+        "age": 70,
+        "starRating": 3.6,
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/256533/Donald-Trump-Cartoon-2.png"
+    }
+]
